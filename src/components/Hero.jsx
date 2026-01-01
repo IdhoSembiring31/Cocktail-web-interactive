@@ -23,7 +23,7 @@ function Hero() {
         })  
         gsap.from(paragraphSplit.lines,{
             yPercent:100,
-            ease:'expo.Out',
+            ease:'exp.out',
             stagger:0.05,
             duration:1.8,
             opacity:0,
@@ -38,19 +38,20 @@ function Hero() {
                 scrub:true,
             }
         })
-         .to('.right-left', {y:200},0)
-         .to('.left-leaf',{y:-200}, 0)
+         .to(".right-left", {y:200},0)
+         .to(".left-leaf",{y:-200}, 0)
     
-         const startValue = isMobile ? "50% top": "center 60%";
+         const startValue = isMobile ? "top 50%": "center 60%";
          const endValue = isMobile ? "120% top" : "bottom top";
 
          const tl = gsap.timeline({
             scrollTrigger:{
-            trigger:'video',
+            trigger:"video",
             start:startValue,
             end:endValue,
             scrub:true,
             pin:true,
+            
             }
          })
 
@@ -85,10 +86,18 @@ function Hero() {
                 </div>
             </div>
         </div>
+        
     </section>
     <div className="video absolute inset-0">
-        <video ref={videoRef} src="/videos/output.mp4" muted playsInline preload='auto' loop></video>
-    </div>
+		<video
+		 ref={videoRef}
+		 muted
+		 playsInline
+		 preload="auto"
+		 src="/videos/output.mp4"
+		/>
+	 </div>
+    
     </>
   )
 }
