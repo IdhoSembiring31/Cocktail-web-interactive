@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import React from 'react'
 import Cocktails from "./components/Cocktails";
 import About from "./components/About";
+import Art from "./components/Art";
 function App() {
   return (
     <main>
@@ -13,6 +14,7 @@ function App() {
       <Hero/>
       <Cocktails/>
       <About/>
+      <Art/>
     </main>
   )
 }
