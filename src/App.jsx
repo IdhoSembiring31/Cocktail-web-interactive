@@ -7,6 +7,7 @@ import React from 'react'
 import Cocktails from "./components/Cocktails";
 import About from "./components/About";
 import Art from "./components/Art";
+import Menu from "./components/Menu";
 function App() {
   return (
     <main>
@@ -15,6 +16,7 @@ function App() {
       <Cocktails/>
       <About/>
       <Art/>
+      <Menu/>
     </main>
   )
 }
